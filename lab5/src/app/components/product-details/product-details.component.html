@@ -1,0 +1,71 @@
+<div class="bg-gray-800 p-6 text-gray-100">
+  <div class="container mx-auto max-w-lg">
+    <h1 class="text-4xl font-extrabold text-white mb-5">Product Details</h1>
+    <p class="text-xl mt-2 text-gray-300">
+      Product Id: <span class="font-semibold">{{ product?.id }}</span>
+    </p>
+    <p class="text-xl mt-2 text-gray-300">
+      Product Name: <span class="font-semibold">{{ product?.name }}</span>
+    </p>
+    <p class="text-xl mt-2 text-gray-300">
+      Product Price: <span class="font-semibold">${{ product?.price }}</span>
+    </p>
+    <p class="text-xl mt-2 text-gray-300">
+      Product Quantity:
+      <span class="font-semibold">{{ product.quantity }}</span>
+    </p>
+    <div class="mt-4 flex items-center">
+      <svg
+        class="text-yellow-500 w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 12.027l-3.675 1.93.698-4.078L.351 6.9l4.187-.609L8 2l1.462 3.691 4.188.609-3.625 2.978.698 4.078L8 12.027z"
+        />
+      </svg>
+      <svg
+        class="text-yellow-500 w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 12.027l-3.675 1.93.698-4.078L.351 6.9l4.187-.609L8 2l1.462 3.691 4.188.609-3.625 2.978.698 4.078L8 12.027z"
+        />
+      </svg>
+      <svg
+        class="text-yellow-500 w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 12.027l-3.675 1.93.698-4.078L.351 6.9l4.187-.609L8 2l1.462 3.691 4.188.609-3.625 2.978.698 4.078L8 12.027z"
+        />
+      </svg>
+      <svg
+        class="text-yellow-500 w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 12.027l-3.675 1.93.698-4.078L.351 6.9l4.187-.609L8 2l1.462 3.691 4.188.609-3.625 2.978.698 4.078L8 12.027z"
+        />
+      </svg>
+      <svg
+        class="text-yellow-500 w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 12.027l-3.675 1.93.698-4.078L.351 6.9l4.187-.609L8 2l1.462 3.691 4.188.609-3.625 2.978.698 4.078L8 12.027z"
+        />
+      </svg>
+    </div>
+    <a
+      [routerLink]="['/products']"
+      class="inline-block mt-6 px-6 py-2 text-white bg-teal-600 rounded-lg hover:bg-teal-500 transition-colors"
+    >
+      Back to Products
+    </a>
+  </div>
+</div>

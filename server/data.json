@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Book",
+      "price": 100,
+      "quantity": 200
+    },
+    {
+      "id": "2",
+      "name": "Pen",
+      "price": 80,
+      "quantity": 40
+    },
+    {
+      "id": "3",
+      "name": "Mouse",
+      "price": 90,
+      "quantity": 17
+    },
+    {
+      "name": "Phone",
+      "price": "500",
+      "quantity": "20",
+      "id": "4"
+    }
+  ]
+}

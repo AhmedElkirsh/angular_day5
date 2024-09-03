@@ -1,0 +1,82 @@
+<div class="mt-5 text-center">
+  <h1 class="text-gray-600 text-3xl font-semibold">Our Products</h1>
+  <div class="container mx-auto mt-4 px-4">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-100">
+        <tr>
+          <th
+            scope="col"
+            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Id
+          </th>
+          <th
+            scope="col"
+            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Name
+          </th>
+          <th
+            scope="col"
+            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Price
+          </th>
+          <th
+            scope="col"
+            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Quantity
+          </th>
+          <th
+            scope="col"
+            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <!-- Assuming you are using Angular for loops -->
+        @for (product of products; track product.id) {
+        <tr>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+          >
+            {{ product.id }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            {{ product.name | uppercase }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            {{ product.price | currency }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            {{ product.quantity }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+            <a
+              [routerLink]="['/products', product.id, 'edit']"
+              class="text-blue-500 hover:text-blue-700 mx-2"
+            >
+              <i class="bi bi-pencil-square"></i>
+            </a>
+            <a
+              [routerLink]="['/products', product.id]"
+              class="text-yellow-500 hover:text-yellow-700 mx-2"
+            >
+              <i class="bi bi-eye-fill"></i>
+            </a>
+            <button
+              (click)="deleteHandler(product.id)"
+              class="text-red-500 hover:text-red-700 mx-2"
+            >
+              <i class="bi bi-trash3-fill"></i>
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="container mx-auto px-4 py-6">
+  <h1 class="text-2xl font-bold mb-6">
+    {{ productId == 0 ? "Add New Product" : "Edit Product" }}
+  </h1>
+  <form (submit)="productHandler($event)" [formGroup]="productForm">
+    <div class="mb-4">
+      <label for="name" class="block text-sm font-medium text-gray-700"
+        >Product Name</label
+      >
+      <input
+        type="text"
+        formControlName="name"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        id="name"
+        placeholder="Enter Product Name"
+      />
+      <ng-container *ngIf="getName.touched || getName.dirty">
+        <div
+          *ngIf="getName.hasError('required')"
+          class="text-red-600 text-sm mt-1"
+        >
+          Product Name is Required
+        </div>
+        <div
+          *ngIf="getName.hasError('minlength')"
+          class="text-red-600 text-sm mt-1"
+        >
+          Product Name length must be greater than 3
+        </div>
+      </ng-container>
+    </div>
+    <div class="mb-4">
+      <label for="price" class="block text-sm font-medium text-gray-700"
+        >Price</label
+      >
+      <input
+        type="number"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        formControlName="price"
+        id="price"
+        placeholder="Enter Product Price"
+      />
+      <ng-container *ngIf="getPrice.touched || getPrice.dirty">
+        <div
+          *ngIf="getPrice.hasError('required')"
+          class="text-red-600 text-sm mt-1"
+        >
+          Price is Required
+        </div>
+      </ng-container>
+    </div>
+    <div class="mb-4">
+      <label for="quantity" class="block text-sm font-medium text-gray-700"
+        >Quantity</label
+      >
+      <input
+        type="number"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        id="quantity"
+        formControlName="quantity"
+        placeholder="Enter Product Quantity"
+      />
+      <ng-container *ngIf="getQuantity.touched || getQuantity.dirty">
+        <div
+          *ngIf="getQuantity.hasError('required')"
+          class="text-red-600 text-sm mt-1"
+        >
+          Quantity is Required
+        </div>
+      </ng-container>
+    </div>
+
+    <button
+      type="submit"
+      class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+    >
+      {{ productId == 0 ? "Add New Product" : "Edit Product" }}
+    </button>
+  </form>
+</div>

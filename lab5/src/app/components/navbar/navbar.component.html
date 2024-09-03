@@ -1,0 +1,29 @@
+<nav class="bg-gray-800 p-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <a href="#" class="text-white text-2xl font-semibold">Navbar</a>
+
+    <div class="hidden md:flex md:items-center md:space-x-6">
+      <a
+        [routerLink]="['/']"
+        class="text-white hover:text-red-400"
+        [routerLinkActive]="'text-red-400'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+      <a
+        [routerLink]="['/products']"
+        class="text-white hover:text-red-400"
+        [routerLinkActive]="'text-red-400'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Products</a
+      >
+      <a
+        [routerLink]="['/products', 0, 'edit']"
+        class="text-white hover:text-red-400"
+        [routerLinkActive]="'text-red-400'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Add Product</a
+      >
+    </div>
+  </div>
+</nav>
